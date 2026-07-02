@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chia-Liang Ko | Global Business Development & Transformation Consultant</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0f2027; 
+            --secondary-color: #203a43; 
+            --accent-color: #00f2fe; 
+            --accent-gradient: linear-gradient(135deg, #0072ff 0%, #00f2fe 100%);
+            --text-dark: #2c3e50;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            padding: 6px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: var(--text-light);
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 120px 0 100px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 850px;
+            margin: 0 auto 40px auto;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 12px 35px;
+            background: var(--accent-gradient);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-gradient);
+            margin: 15px auto 0 auto;
+        }
+
+        /* Core Expertise */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        /* Metrics */
+        .metrics-section {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .metric-item h2 {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* AI Section (Highlight) */
+        .ai-section {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 100%);
+            color: var(--text-light);
+            border-radius: 12px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .ai-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .ai-header i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .ai-header h2 {
+            font-size: 1.8rem;
+            color: var(--text-light);
+        }
+
+        .ai-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .ai-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Case Studies */
+        .case-category {
+            margin-bottom: 40px;
+        }
+
+        .case-category h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 10px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-item {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            background: #e2e8f0;
+            color: var(--text-dark);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* About Me */
+        .bg-light-sec {
+            background-color: var(--bg-light);
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Contact & Footer */
+        footer {
+            background-color: #0b151a;
+            color: var(--text-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-info i {
+            margin-right: 8px;
+            color: var(--accent-color);
+        }
+
+        .footer-credits {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .ai-section { padding: 30px; }
+            .contact-info { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <div class="lang-switch">
+                <a href="index.html" class="lang-btn">中文 (CN)</a>
+            </div>
+            <h1>Chia-Liang Ko</h1>
+            <p>Global Business Development & Agile Transformation Consultant | 16-Year Textile Innovation & AI Management Expert</p>
+            <p style="font-size: 1.1rem; max-width: 850px; opacity: 0.8; line-height: 1.6;">
+                Specialized in commercializing cutting-edge textile technologies with 16 years of proven track record expanding premier European, US, and APAC markets. Expert in consultative sales that address core client pain points, leveraging AI tools to drive marketing automation, agile pipeline management, and sustainable revenue growth in economic headwinds.
+            </p>
+            <a href="#contact" class="btn-contact">Connect with Consultant</a>
+        </div>
+    </header>
+
+    <!-- Core Expertise -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <h3>Global BD & Consultative Sales</h3>
+                    <p>16 years of deep cultivation in EU, US, and APAC (Japan/Korea) markets. Proficient in cross-cultural high-stakes negotiations, strategic international trade shows (e.g., Munich), and nurturing high-value key accounts with solution-oriented methodologies.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Agile Product Commercialization</h3>
+                    <p>Possess sharp market insight to drive full-lifecycle product commercialization. Successfully bridged cutting-edge innovations (reflective tech, sustainable recycled materials, digital jacquard) directly into the supply chains of top-tier global brands.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-cpu"></i>
+                    <h3>Modern AI-Driven Management</h3>
+                    <p>Pioneered the integration of advanced AI workflows into traditional business environments. Expert at leveraging AI tools for market research, intelligent multilingual copywriting, and high-precision lead generation management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics-section">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <h2>30+</h2>
+                    <p>Annual New & Custom Product Line Launches</p>
+                </div>
+                <div class="metric-item">
+                    <h2>10%</h2>
+                    <p>Conversion & Order Success Rate for New Products</p>
+                </div>
+                <div class="metric-item">
+                    <h2>1 ~ 3</h2>
+                    <p>Annual Newly Secured Enterprise Clients With Orders</p>
+                </div>
+                <div class="metric-item">
+                    <h2>Millions</h2>
+                    <p>NTD Net Profit Generated Amid 20% Market Downturn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Feature Section -->
+    <section style="padding: 40px 0;">
+        <div class="container">
+            <div class="ai-section">
+                <div class="ai-header">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>Core Highlight: AI-Driven Commercial Efficiency</h2>
+                </div>
+                <p style="opacity: 0.9; font-weight: 300;">As a forward-thinking business consultant, I actively champion digital transformation by deeply integrating next-generation AI tools like <strong>Codex & Gemini</strong> into international workflows:</p>
+                <div class="ai-grid">
+                    <div class="ai-card">
+                        <h4 style="color: var(--accent-color); margin-bottom: 10px;">Precision Lead Generation & CRM</h4>
+                        <p style="font-size: 0.95rem; opacity: 0.85;">Utilize AI for global market data analysis and target filtration, drastically shortening business development cycles and improving precision targeting success rates.</p>
+                    </div>
+                    <div class="ai-card">
+                        <h4 style="color: var(--accent-color); margin-bottom: 10px;">Intelligent Multilingual Marketing</h4>
+                        <p style="font-size: 0.95rem; opacity: 0.85;">Deploy AI systems to generate high-conversion international marketing content and business correspondence, ensuring cross-cultural precision and extreme workflow efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Selected Projects & Commercial Achievements</h2>
+            
+            <div class="case-category">
+                <h3>1. Innovation Commercialization: From Concept to Global Brand Orders</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="badge">Sustainable Strategy</span>
+                        <h4>Post-Consumer Recycled Cotton Yarn Project</h4>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Initiated and established a zero-development-fee collaboration model with a key supplier (Toung Loong Textile), drastically reducing R&D costs for the company while introducing a high-potential eco-friendly product line.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="badge">2024 - 2025</span>
+                        <h4>Image-to-Fabric Jacquard Technology — PING COLLECTION</h4>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Led the integration of digital art and advanced textile engineering, successfully securing high-value Polo Shirt orders for PING COLLECTION and creating a brand-new product line.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="badge">2015 - 2017</span>
+                        <h4>Wool Fiber Cross-Domain Application — FILA</h4>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Disrupted conventional usage by applying wool fibers to double-sided T-Shirts and Soft Shells, successfully capturing accounts with FILA and expanding the concept to major US brands.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="badge">2014 - 2019</span>
+                        <h4>Reflective Printing Commercialization — COLUMBIA & ON AG</h4>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Successfully commercialized reflective printing technology on performance fabrics, securing initial orders with COLUMBIA (Outerwear/T-Shirts) and later replicating the model to ON AG Legging projects, proving scalability.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-category" style="margin-top: 5px;">
+                <h3>2. International Cross-Cultural Market Expansion</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="badge">APAC Market Growth</span>
+                        <h4>High-Velocity Business Execution (MITUBOSHI, SCT JAPAN, PHENIX)</h4>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Maintained bi-annual face-to-face strategic client visits in Japan and South Korea pre-pandemic. Reached a record of "visiting 3 key Japanese enterprise clients within a single day with same-day return to Taiwan," demonstrating extreme time management and high-pressure agility.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="badge">Western Market Strategy</span>
+                        <h4>European Trade Exhibitions & Global Strategic Deployment</h4>
+                        <p style="font-size: 0.95rem; margin-top: 5px;">Post-pandemic, continuously directed bi-annual participation in major global exhibitions like Munich Fabric Start, while self-planning strategic roadshows to key markets like the UK to solidify long-term client retention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section class="bg-light-sec">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-text">
+                <p>I am Chia-Liang Ko, a senior business development and transformation consultant with 16 years of front-line global marketplace experience. I firmly believe that "exceptional business development is not merely about selling a product, but providing critical business solutions that alleviate client vulnerabilities."</p>
+                <p style="margin-top: 15px;">Throughout my career, I have excelled in aligning cross-functional teams (including sales assistants and engineering/mill teams) to seamlessly manage the full lifecycle of international orders from development and production coordination to final shipment. Embracing the modern digital era, I have successfully embedded AI systems into daily routines to automate and streamline core workflows. I am currently seeking high-level challenges where I can leverage my international business expertise to spearhead innovation and bring measurable revenue growth and digital transformation to an organization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 30px;">Connect with Consultant</h2>
+            <div class="contact-info">
+                <a href="mailto:cityrick.tw@gmail.com"><i class="fa-solid fa-envelope"></i> cityrick.tw@gmail.com</a>
+                <a href="https://linkedin.com/in/chia-liang-ko-672487b3" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/chia-liang-ko-672487b3</a>
+                <span><i class="fa-solid fa-location-dot"></i> Taipei City, Taiwan (Available for International Travel)</span>
+            </div>
+            <div class="footer-credits">
+                &copy; 2026 Chia-Liang Ko. All Rights Reserved. Designed for Professional Business Development & Digital Transformation.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
